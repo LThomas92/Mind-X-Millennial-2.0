@@ -1,0 +1,32 @@
+.privacy-policy-page {
+	background-color: rgba($white, 0.95);
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 1.2rem 2.5rem;
+	border-radius: 3px;
+
+	@include media('>=phone') {
+		padding: 1.5rem 3rem;
+	}
+
+	@include media('>=tablet') {
+		max-width: 80%;
+		padding: 2rem 4rem;
+	}
+
+	@include media('>=desktop-medium') {
+		padding: 2.5rem 4.5rem;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $roboto;
+		font-size: 1.9rem;
+		color: $cyan;
+		margin: 1.5rem 0;
+	}
+
+	p {
+		font-family: roboto;
+		color: rgba($black, 0.7);
+		font-size: 1.1rem;
+	}
+}

@@ -1,0 +1,32 @@
+@import "./utilities/responsive";
+@import "./utilities/variables";
+@import "./utilities/globals";
+
+//HEADER
+@import "header";
+
+//FOOTER
+@import "footer";
+
+//PAGES
+@import "pages/homepage";
+@import "pages/single-blog";
+@import "pages/about";
+@import "pages/search-results";
+@import "pages/contact-us";
+@import "pages/privacy-policy";
+@import "pages/404";
+
+//CATEGORY
+@import "pages/category";
+
+//SEARCH
+@import "search";
+
+//BLOCKS
+@import "blocks/login";
+@import "blocks/register";
+@import "blocks/about-text-block";
+@import "blocks/about-three-column";
+
+@import "main";

@@ -1,0 +1,99 @@
+.site-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem 3.5rem;
+	border-top: 1.5px solid rgba($white, 0.6);
+	padding-bottom: 2.5rem;
+
+	@include media('>=phone') {
+		margin: 1.5rem 6.5rem;
+	}
+
+	@include media('>=tablet') {
+		margin: 2rem 8.5rem;
+	}
+
+	@include media('>=desktop-medium') {
+		margin: 2.5rem 12.5rem;
+	}
+
+	&__sm-links {
+		display: flex;
+		justify-content: center;
+		margin: 1.2rem 0;
+	}
+	&__instagram {
+		display: block;
+		svg {
+			width: 2.2rem;
+			height: 2.2rem;
+			transition: all 300ms ease-in-out;
+			&:hover {
+				path {
+					fill: $blue;
+				}
+			}
+		}
+	}
+	&__twitter {
+		display: block;
+		margin-left: 0.5rem;
+		svg {
+			width: 2.2rem;
+			height: 2.2rem;
+			transition: all 300ms ease-in-out;
+			&:hover {
+				path {
+					fill: $blue;
+				}
+			}
+		}
+	}
+
+	&__nav {
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 0.9rem;
+			li a {
+				font-family: $oswald;
+				font-size: 0.9rem;
+				color: $white;
+				transition: all 300ms ease-in;
+				&:after {
+					content: "\00B7";
+					width: 0.8rem;
+					margin: 0 0.4rem;
+					}
+					&:hover {
+						color: $cyan;
+					}
+				}
+				
+				}
+			}
+		
+	
+	&__copyright {
+		font-family: $oswald;
+		font-size: 0.9rem;
+		color: $white;
+	}
+	&__designedby {
+		font-family: $oswald;
+		font-size: 0.9rem;
+		color: $white;
+		span {
+			a {
+				text-decoration: none;
+				color: darkcyan;
+				transition: all 300ms ease-in;
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

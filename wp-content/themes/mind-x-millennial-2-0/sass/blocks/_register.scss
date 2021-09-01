@@ -1,0 +1,143 @@
+.register-popup {
+	opacity: 0;
+	transition: opacity 300ms ease-in;
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	border-radius: 3px;
+	width: 90%;
+	padding: 6rem 4.5rem;
+	z-index: 10;
+	webkit-box-shadow: 0 0 10px $black;
+    box-shadow: 0 0 10px $black;
+	display: none;
+
+	@include media('>=phone') {
+		padding: 2.5rem 2.8rem;
+	}
+
+	@include media('>=tablet') {
+		width: 75%;
+		padding: 4rem 3rem;
+	}
+
+	@include media('>=desktop-medium') {
+		width: 55%;
+		padding: 6rem 4.5rem;
+}
+	&__active {
+		opacity: 1;
+		display: block;
+	}
+
+	&__logo {
+		text-align: center;
+		img {
+			width: 100%;
+			height: 2.5rem;
+			display: block;
+		}
+	}
+
+	&__close-icon {
+		position: absolute;
+		right: 32px;
+		top: 2rem;
+		width: 32px;
+		height: 32px;
+		opacity: 0.3;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+		&:before , &:after {
+			position: absolute;
+			left: 15px;
+			content: ' ';
+			height: 33px;
+			width: 2px;
+			background-color: #333;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+
+	}
+
+	.tml-register{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 3rem;
+		form {
+			width: 90%;
+			@include media('>=phone') {
+				width: 75%;
+			}
+			
+			@include media('>=tablet') {
+				width: 60%;
+			}
+			
+			@include media('>=desktop-medium') {
+				width: 50%;	
+			}
+		}
+		.tml-field {
+			padding: 0.4rem 0.8rem;
+			max-width: 100%;
+			font-family: $oswald;
+		}
+		.tml-button {
+			border: none;
+			outline: none;
+			background-color: $blue;
+			padding: 0.6rem 1.2rem;
+			font-family: $oswald;
+			border-radius: 2.5px;
+			color: $white;
+			cursor: pointer;
+			transition: all 300ms ease-in;
+			&:hover {
+				color: $cyan;
+			}
+		}
+		.tml-links {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			width: 100%;
+			margin-top: 2.5rem;
+			@include media('>=phone') {
+				flex-direction: row;
+			}
+		
+			li a {
+				font-family: $oswald;
+				background-color: $black;
+				color: $white;
+				padding: 0.9rem 1.2rem;
+				font-family: $oswald;
+				border-radius: 2.5px;
+				transition: all 300ms ease-in;
+				display: inline-block;
+				margin-bottom: 2rem;
+				&:hover {
+					color: $cyan;
+				}
+				@include media('>=phone') {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

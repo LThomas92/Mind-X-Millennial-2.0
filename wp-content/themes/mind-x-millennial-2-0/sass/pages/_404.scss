@@ -1,0 +1,62 @@
+.error-404 {
+	margin: 1.5rem 2rem;
+	text-align: center;
+	@include media('>=phone') {
+		margin: 2rem 3rem;
+	}
+
+	@include media('>=tablet') {
+		margin: 2.5rem 4rem;
+	}
+
+	@include media('>=desktop-medium') {
+		margin: 3.5rem 8rem;
+	}
+	.page-title {
+		font-family: $oswald;
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(224,224,224,1) 0%, rgba(0,106,255,1) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-bottom: 2.5rem;
+		font-size: 6rem;
+
+		@include media('>=phone') {
+			font-size: 8rem;
+		}
+	
+		@include media('>=tablet') {
+			font-size: 10rem;
+		}
+	
+		@include media('>=desktop-medium') {
+			font-size: 12rem;
+		}
+	}
+	.page-content {
+		p {
+			font-family: $oswald;
+			color: $white;
+			display: block;
+			margin-bottom: 2rem;
+		}
+	}
+	&__links {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		a {
+			background-color: $white;
+			border-radius: 1.4px;
+			color: $cyan;
+			padding: 0.8rem 1.4rem;
+			font-family: $oswald;
+			margin-right: 2.5rem;
+			transition: all 300ms ease-in;
+			display: inline-block;
+			&:hover {
+				background-color: $cyan;
+				color: $white;
+			}
+		}
+	}
+}

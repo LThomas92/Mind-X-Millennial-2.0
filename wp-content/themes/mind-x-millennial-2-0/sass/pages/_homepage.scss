@@ -1,0 +1,258 @@
+.homepage {
+	&__featured-posts {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		padding: 0 2.2rem;
+
+		@include media('>=tablet') {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding: 0 2.8rem;
+			margin-bottom: 3.5rem;
+		}
+	
+		@include media('>=desktop-medium') {
+			padding: 0 4rem;
+			margin-bottom: 4.5rem;
+		}
+
+	}
+	&__featured-post {
+		width: 100%;
+		margin-bottom: 12.5rem;
+		padding-left: 0;
+		position: relative;
+
+		@include media('>=phone') {
+			padding-left: 4rem;
+		}
+
+		@include media('>=tablet') {
+			padding-left: 5rem;
+		}
+	
+		@include media('>=desktop-medium') {
+			padding-left: 7rem;
+		}
+
+		&__image {
+			overflow: hidden;
+
+			img {
+				margin-left: auto;
+				display: block;
+				width: 90%;
+				height: 100%;
+				object-fit: cover;
+				transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+				border-radius: 3px;
+			}
+
+		}
+		&__content {
+			background-color: $offWhite;
+			border-radius: 3px;
+			position: absolute;
+			width: 100%;
+			padding: 0.8rem 1.8rem;
+			right: 0;
+			bottom: -8.5rem;
+
+			@include media('>=phone') {
+				padding: 1rem 2rem;
+				right: 3rem;
+				bottom: -2rem;
+				width: 80%;
+			}
+
+			@include media('>=tablet') {
+				width: 90%;
+				padding: 1.2rem 2.2rem;
+				bottom: -2rem;
+				right: 3rem;
+			}
+		
+			@include media('>=desktop-medium') {
+				padding: 1.5rem 2.5rem;
+				bottom: -5rem;
+				right: 3rem;
+				width: 80%;
+			}
+		}
+
+		&__desc {
+			font-size: 0.9rem;
+			line-height: 1.2;
+			margin-bottom: 0.8rem;
+			@include media('>=phone') {
+				font-size: 1rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 1.1rem;
+				line-height: 1.6;
+			}
+		
+			@include media('>=desktop-medium') {
+				font-size: 1.2rem;
+			}
+		}
+
+		&__meta {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__date {
+			font-family: $oswald;
+			font-size: 0.8rem;
+			line-height: 1.6;
+
+			@include media('>=phone') {
+				font-size: 0.95rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 1rem;
+			}
+		
+			@include media('>=desktop-medium') {
+				font-size: 1.2rem;
+			}
+		}
+
+		&__category {
+			font-family: $oswald;
+			font-size: 0.8rem;
+			line-height: 1.6;
+			color: $blue;
+
+			@include media('>=phone') {
+				font-size: 0.95rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 1rem;
+			}
+		
+			@include media('>=desktop-medium') {
+				font-size: 1.2rem;
+			}
+		}
+
+		&__title {
+			font-family: $oswald;
+			font-size: 1.2rem;
+			font-weight: 500;
+			letter-spacing: -0.95px;
+			line-height: 1.2;
+			margin-top: 0.6rem;
+			margin-bottom: 0.7rem;
+			color: $cyan;
+
+			@include media('>=phone') {
+				font-size: 1.6rem;
+				line-height: 1;
+				margin-top: 0.7rem;
+				margin-bottom: 0.8rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 1.9rem;
+				margin-top: 0.9rem;
+				margin-bottom: 1rem;
+			}
+		
+			@include media('>=desktop-medium') {
+				font-size: 2.2rem;
+				margin-top: 1.2rem;
+				margin-bottom: 1.4rem;
+			}
+		}
+	}
+	&__featured-post-small {
+		flex-basis: 100%;
+		margin-bottom: 3.5rem;
+
+		@include media('>=tablet') {
+			flex-basis: calc((100% - 2rem) / 3);
+		}
+	
+		&__image {
+			
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+
+			}
+
+			&__date {
+				font-family: $oswald;
+				font-size: 0.8rem;
+				color: $white;
+				margin-bottom: 0.5rem;
+
+				@include media('>=phone') {
+					font-size: 0.95rem;
+				}
+	
+				@include media('>=tablet') {
+					font-size: 1rem;
+				}
+			
+				@include media('>=desktop-medium') {
+					font-size: 1.2rem;
+				}
+			}
+
+			&__category {
+				font-family: $oswald;
+				font-size: 0.8rem;
+				color: $cyan;
+				margin-bottom: 0.2rem;
+
+				@include media('>=phone') {
+					font-size: 0.95rem;
+				}
+	
+				@include media('>=tablet') {
+					font-size: 1rem;
+				}
+			
+				@include media('>=desktop-medium') {
+					font-size: 1.2rem;
+				}
+			}
+
+			&__title {
+				font-family: $oswald;
+				font-size: 1.1rem;
+				font-weight: 500;
+				color: $white;
+				margin-top: 0.8rem;
+				margin-bottom: 1rem;
+
+				@include media('>=phone') {
+					font-size: 1.25rem;
+				}
+	
+				@include media('>=tablet') {
+					font-size: 1.3rem;
+				}
+			
+				@include media('>=desktop-medium') {
+					font-size: 1.8rem;
+				}
+			}
+
+			&__desc {
+				font-family: $oswald;
+				font-size: 0.9rem;
+				color: $white;
+			}
+		}
+	}

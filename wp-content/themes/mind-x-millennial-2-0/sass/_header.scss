@@ -1,0 +1,282 @@
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.8rem 1.2rem;
+	margin-bottom: 2.5rem;
+	@include media('>=phone') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.8rem 1.8rem;
+	}
+
+	@include media('>=tablet') {
+		padding: 0.8rem 2.8rem;
+	}
+
+	@include media('>=desktop-medium') {
+		padding: 1.2rem 4rem;
+	}
+
+	&__right {
+		display: flex;	
+	}
+
+	&__login-links {
+		@include media('>=phone') {
+			list-style: none;
+			display: flex;
+			margin-right: 1.4rem;
+		}
+	
+		li a {
+			font-family: $oswald;
+			font-size: 0.9rem;
+			color: $white;
+			margin-right: 1.2rem;
+			transition: color 300ms ease-in-out;
+			&:hover {
+				color: $cyan;
+			}
+		}
+	}
+
+	&__mobile-login {
+		display: flex;
+		justify-content: space-between;
+
+		@include media('>=tablet') {
+			display: none;
+		}
+
+	}
+
+	.hamburger-menu {
+		width: 2rem;
+		height: 2rem;
+		transition: all 300ms ease-in;
+
+		&:hover {
+			cursor: pointer;
+			span {
+				background-color: darkcyan;
+			}
+		}
+		
+		span {
+			background-color: $white;
+			width: 100%;
+			height: 0.18rem;
+			margin: 0.5rem 0;
+			border-radius: 3px;
+			display: block;
+
+			&:nth-of-type(2) {
+				width: 1.2rem;
+			}
+
+		}
+	}
+
+	.main-navigation {
+		display: flex;
+		flex-direction: column;
+		li {
+			list-style: none;
+			a {
+				text-decoration: none;
+				font-family: $oswald;
+				color: $black;
+				font-size: 1.8rem;
+				line-height: 0.9;
+				transition: all 300ms ease-in;
+				&:hover {
+					color: $blue;
+				}
+				@include media('>=phone') {
+					font-size: 2.2rem;
+				}
+			
+				@include media('>=tablet') {
+					font-size: 2.8rem;
+				}
+			
+				@include media('>=desktop-medium') {
+					font-size: 3.5rem;
+					line-height: 1;	
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			border-bottom: 2px solid $cyan;
+			padding-bottom: 1rem;
+			margin-bottom: 1.5rem;
+			li {
+				margin: 2.5rem 0;
+				a {
+					text-decoration: none;
+					font-family: $oswald;
+					color: $black;
+					font-size: 1.8rem;
+					line-height: 0.9;
+					@include media('>=phone') {
+						font-size: 2.2rem;
+					}
+				
+					@include media('>=tablet') {
+						font-size: 2.8rem;
+					}
+				
+					@include media('>=desktop-medium') {
+						font-size: 3.5rem;
+						line-height: 1;	
+					}
+				}
+			}
+		}
+
+		&__close-icon {
+			position: absolute;
+			right: 32px;
+			top: 5rem;
+			width: 32px;
+			height: 32px;
+			opacity: 0.3;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+			&:before , &:after {
+				position: absolute;
+				left: 15px;
+				content: ' ';
+				height: 33px;
+				width: 2px;
+				background-color: #333;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+
+		}
+
+	}
+
+	&__popout-menu {
+		opacity: 0;
+		transition: all 300ms ease-in-out;
+		background-color: $white;
+		position: fixed;
+		top: 0;
+		left: -9999px;
+		height: 100%;
+		z-index: -1;
+		padding: 5.5rem 4.5rem;
+		overflow-x: hidden;
+		width: 85%;
+		@include media('>=phone') {
+			width: 60%;
+		}
+	
+		@include media('>=tablet') {
+			width: 55%;
+		}
+	
+		@include media('>=desktop-medium') {
+			width: 45%;
+		}
+		&__active {
+			opacity: 1;
+			z-index: 5;
+			left: 0;
+		}
+	}
+
+	&__logo {
+		height: 2rem;
+		display: block;
+		object-fit: cover;
+
+		@include media('>=phone') {
+			height: 3rem;
+		}
+		@include media('>=tablet') {
+			height: 3.5rem;
+		}
+		@include media('>=desktop-medium') {
+			height: 4.5rem;
+		}
+	}
+
+	.search-icon {
+		position: relative;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+
+		@include media('>=phone') {
+			width: 25px;
+			height: 25px;
+		}
+	
+		@include media('>=tablet') {
+			width: 30px;
+			height: 30px;
+		}
+	
+		@include media('>=desktop-medium') {
+			width: 40px;
+			height: 40px;
+		}
+	  }
+	  
+	  .search-line {
+		width: 15px;
+		height: 2px;
+		background: $white;
+		display: inline-block;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 20px;
+		left: 12px;
+		transition: all 0.3s ease-in 0s;
+	  }
+
+	  .active .search-line {
+		width: 30px;
+		left: 0;
+		top: 15px;
+		transition: all 0.3s ease-out 0s;
+	  }
+
+	  .search-circle {
+		width: 15px;
+		height: 15px;
+		border: 1px solid $white;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		transition: top 0.3s ease-in 0s, left 0.3s ease-in 0s, border-radius 0.3s ease-in 0s, border-width 0.3s ease-in 0s, width 0.3s ease-in 0s, height 0.3s ease-in 0s, background-color 0.1s ease-in 0s;
+		background-color: transparent;
+	  }
+
+	  .active .search-circle.third {
+		width: 30px;
+		height: 0;
+		top: 15px;
+		left: 0;
+		transform: rotate(135deg);
+		background-color: $white;
+		border-radius: 0;
+	  }
+	  
+}

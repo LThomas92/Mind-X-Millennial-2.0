@@ -1,0 +1,35 @@
+$bezier: cubic-bezier(0.64, 0.04, 0.35, 1);
+  .to-reveal {
+    opacity: 0;
+  }
+
+  .revealed {
+    transition: 0.6s $bezier;
+  }
+
+.btn {
+	text-decoration: none;
+	font-family: $oswald;
+	font-size: 1rem;
+	line-height: 1.6;
+	text-transform: uppercase;
+	position: relative;
+	color: $black;
+	&:hover {
+		color: $cyan;
+		&:before {
+			transform: translateX(5px);
+			background-color: $cyan;
+		}
+	}
+	&::before {
+		content: '';
+		background-color: rgba($black, 0.7);
+		display: inline-block;
+		width: 2.5rem;
+		height: 0.15rem;
+		vertical-align: middle;
+		margin-right: 1rem;
+		transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+	}
+}
