@@ -13,15 +13,17 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<title><?php the_title();?> | Mind X Millennial</title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mind X Millennial is here to provide you with articles on various topics ranging from sports to music to fictonal stories. Tune in to get the views of the millennials on everything current!">
 
-		<!--  Essential META Tags -->
+	<!--  Essential META Tags -->
 
 <meta property="og:title" content="Mind X Millennial">
 <meta property="og:description" content="Making you feel better one strand at a time">
-<!-- <meta property="og:image" content="https://i.imgur.com/P7Iid8b.jpg" />
-<meta property="og:image:secure_url" content="https://i.imgur.com/P7Iid8b.jpg"> -->
+<meta property="og:image" content="https://imgur.com/EXFwmQI.jpg" />
+<meta property="og:image:secure_url" content="https://imgur.com/EXFwmQI.jpg">
 <meta property="og:type" content="image/jpg">
 <meta property="og:image:width" content="300">
 <meta property="og:image:height" content="300">
@@ -41,7 +43,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
 	<?php wp_head(); ?>
-
 
 </head>
 

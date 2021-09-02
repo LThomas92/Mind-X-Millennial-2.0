@@ -11,9 +11,11 @@
         setup_postdata($post); ?>
 		<?php if($i == 0) {?>
         <li class="homepage__featured-post" key="<?php echo $i; ?>">
+			<a href="<?php echo the_permalink();?>">
 			<picture class="homepage__featured-post__image">
 				<?php the_post_thumbnail(); ?>
 			</picture>
+			</a>
 			<div class="homepage__featured-post__content">
 				<div class="homepage__featured-post__meta">
 					<?php $cat = get_the_category()[0]->name; 
@@ -22,7 +24,7 @@
 					<a href="<?php echo get_category_link($catID); ?>"><p class="homepage__featured-post__category"><?php echo $cat; ?></p></a>
 					<date class="homepage__featured-post__date"><?php echo get_the_date(); ?></date>
 				</div>
-				<h2 class="homepage__featured-post__title"><?php the_title(); ?></h2>
+				<a href="<?php echo the_permalink();?>"><h2 class="homepage__featured-post__title"><?php the_title(); ?></h2></a>
 				<p class="homepage__featured-post__desc"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
 				<a class="btn" href="<?php the_permalink(); ?>">Read More</a>
 			</div>

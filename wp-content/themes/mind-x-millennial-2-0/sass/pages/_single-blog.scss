@@ -152,5 +152,27 @@
 			font-weight: 400;
 		}
 	}
+	&__meta {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.2rem 2.5rem;
+	}
 
+	&__photo-cred {
+		font-size: 0.8rem;
+		line-height: 1.5;
+		font-style: italic;
+		font-family: $roboto;
+	}
+
+}
+
+.single-post__share-icon-img {
+	height: 1.5rem;
+	margin-right: 0.4rem;
+}
+
+.single-post-share-icons {
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
